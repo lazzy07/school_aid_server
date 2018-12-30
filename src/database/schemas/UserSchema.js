@@ -4,7 +4,8 @@ var USERS_DATABASE = require("../../constants").USERS_DATABASE;
 var userSchema = new mongoose.Schema({
   userName: String,
   password: String,
-  type: {default: "dep_off", type: String}
+  email: String,
+  type: {default: "member", type: String}
 })
 
 
