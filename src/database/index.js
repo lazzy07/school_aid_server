@@ -17,8 +17,8 @@ class Database{
    */
   static loginUser(user){
     return new Promise((resolve, reject) => {
-      const {userName, password} = user;
-      userDB.findOne({userName, password}).then(userData => {
+      const {username, password} = user;
+      userDB.findOne({userName: username, password}).then(userData => {
         if(userData){
           resolve(userData);
         }else{
